@@ -12,13 +12,6 @@ public class AkkaQuickstart {
     //#main-send-messages
     greeterMain.tell(new GreeterMain.SayHello("Charles"));
     //#main-send-messages
-
-    try {
-      System.out.println(">>> Press ENTER to exit <<<");
-      System.in.read();
-    } catch (IOException ignored) {
-    } finally {
-      greeterMain.terminate();
-    }
+    greeterMain.terminate();
   }
 }
